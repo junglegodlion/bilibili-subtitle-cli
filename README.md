@@ -31,7 +31,7 @@ brew install uv                  # macOS
 #   or: curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 2. Install bilibili-subtitle from git (uv pulls the right Python automatically)
-uv tool install git+https://github.com/YOUR_USER/bilibili-subtitle.git
+uv tool install git+https://github.com/junglegodlion/bilibili-subtitle-cli.git
 
 # 3. Install BBDown binary (built-in, downloads from GitHub Releases, no gh needed)
 bilibili-subtitle --install-bbdown
@@ -46,7 +46,7 @@ automatically). Step 3 downloads the latest BBDown release into `~/.local/bin`.
 ### Install from source (for development)
 
 ```bash
-git clone https://github.com/YOUR_USER/bilibili-subtitle.git
+git clone https://github.com/junglegodlion/bilibili-subtitle-cli.git
 cd bilibili-subtitle
 pip install -e .[dev]            # needs Python 3.11+ already installed
 ```
