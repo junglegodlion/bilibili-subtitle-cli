@@ -1,0 +1,26 @@
+.venv/
+output/
+*.egg-info/
+**/__pycache__/
+.pytest_cache/
+*.pyc
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# BBDown login state (contains cookie credentials)
+BBDown.data
+
+# env / secrets
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# logs
+*.log
+

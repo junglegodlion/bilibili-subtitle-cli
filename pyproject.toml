@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bilibili-subtitle"
+version = "0.2.0"
+description = "Download Bilibili subtitles with BBDown and render SRT/VTT/Markdown transcripts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "bilibili-subtitle contributors" }]
+keywords = ["bilibili", "subtitle", "bbdown", "srt", "vtt", "transcript"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+bilibili-subtitle = "bilibili_subtitle.__main__:cli"
+
+[project.urls]
+Homepage = "https://github.com/nilaoda/BBDown"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bilibili_subtitle*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
